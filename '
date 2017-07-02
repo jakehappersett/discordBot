@@ -1,0 +1,6 @@
+##how to make bot##
+1. using the example (https://github.com/sleibrock/discord-bots/blob/master/bots/Bot.py) combinde the bot.py and the dumbbot.py (custom ofc) and get it working
+
+2. could also keep those seperate, but for practice rewrite code 
+
+##ideas for bot##

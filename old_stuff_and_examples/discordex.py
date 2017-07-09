@@ -11,6 +11,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
+    for ej in client.get_all_emojis():
+        print(ej.name, ej.id, ej.managed, ej.server)
 
 @client.event
 async def on_message(message):

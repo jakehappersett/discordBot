@@ -1,8 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import discord
 import asyncio
 from Bot import ChatBot
+from random import randint, choice
 
 class SaundersBot(ChatBot):
     """
@@ -11,10 +12,33 @@ class SaundersBot(ChatBot):
     created mostly to mess with my friends
     
     """
-    STATUS = "Making the girls GUI"
+    STATUS = "Fuck you, Nat"
     client = discord.Client() 
     
+    def __init__(self, name):
+        super(SaundersBot, self).__init__(name)
+    
+    @ChatBot.action()
+    async def fucknat(self, args, mobj):
+        """
+        Put Nat in his place
+        Example: !fucknat
+        """
+        return await self.message(mobj.channel, "Fuck you, Nat")
 
+    @ChatBot.action()
+    async def choice(self, args, mobj):
+        """
+        Make a decision
+        Example: !choice
+        """
+        return await self.message(mobj.channel, choice(["<:gasaunde:293500522550525954>", "<:downsaunder:294248046357905410>"]))
+
+
+if __name__ == "__main__":
+        s = SaundersBot("saunders")
+        s.run()
+        pass
 
 #
 #client = discord.Client()

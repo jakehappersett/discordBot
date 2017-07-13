@@ -17,6 +17,14 @@ class SaundersBot(ChatBot):
     
     def __init__(self, name):
         super(SaundersBot, self).__init__(name)
+
+    @ChatBot.action()
+    async def on_message(self, args, mobj):
+        """
+        test
+        """
+        if message.content.startswith('!test'):
+            return await client.send_message(mobj.channel, "it worked")
     
     @ChatBot.action()
     async def fucknat(self, args, mobj):

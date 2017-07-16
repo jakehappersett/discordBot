@@ -50,21 +50,12 @@ class SaundersBot(ChatBot):
         return await self.message(mobj.channel, a.name + ' has been created')
 
     @ChatBot.action()
-    async def charstats(self, args, mobj):
+    async def inventory(self, args, mobj):
         """
-        Makes a perty printout of character stats
+        access inventory
         """
         player = self.CHARDICT[mobj.author.id]
-        return await self.message(mobj.channel, player)
-
-##replaced with charstats##
-#    @ChatBot.action()
-#    async def inventory(self, args, mobj):
-#        """
-#        access inventory
-#        """
-#        player = self.CHARDICT[mobj.author.id]
-#        return await self.message(mobj.channel, player.printinv())
+        return await self.message(mobj.channel, player.printinv())
 
     @ChatBot.action()
     async def addinventory(self, args, mobj): 
@@ -75,7 +66,7 @@ class SaundersBot(ChatBot):
         #joins arguments for multi word items (i.e. sword of anal destruction)
         jargs = ' '.join(args)
         player.addinv(jargs)
-        return await self.message(mobj.channel, jargs + ' successfully added to inventory \nnew inventory : ' + player.printinv())
+        return await self.message(mobj.channel, str(args) + ' successfully added to inventory \nnew inventory : ' + player.printinv())
 
     @ChatBot.action()
     async def fucknat(self, args, mobj):

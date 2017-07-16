@@ -1,0 +1,5 @@
+# Discord backend modeled after
+https://github.com/sleibrock/discord-bots/tree/master/bots
+
+# Text adventure loosely modeled after
+http://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python/

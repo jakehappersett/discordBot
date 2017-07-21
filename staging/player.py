@@ -25,6 +25,11 @@ class Player():
         """
         out ='[' + ', '.join(str(e) for e in self.inventory) + ']'
         return out
+    def isalive(self):
+        """
+        returns true if hp > 0
+        """
+        return self.hp > 0
 
 
 

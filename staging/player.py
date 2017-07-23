@@ -5,8 +5,9 @@ class Player():
         self.name = name
         self.inventory = ['nat\'s head', 'louie\'s head']
         self.hp = 100
+        self.level = 1 
     def __str__(self):
-        return("{}\n======\nInventory: {}\nHP: {}".format(self.name, self.printinv(), self.hp))
+        return("{}\n======\nInventory: {}\nHP: {} \nLevel: {}".format(self.name, self.printinv(), self.hp, self.level))
     
     def addinv(self, args):
         """
@@ -18,7 +19,6 @@ class Player():
             self.inventory = self.inventory + args
         elif ((type(args) is str) == True):
             self.inventory.append(args)
-    
     def printinv(self):
         """
         converts inventory list to string to print
@@ -30,6 +30,4 @@ class Player():
         returns true if hp > 0
         """
         return self.hp > 0
-
-
 
